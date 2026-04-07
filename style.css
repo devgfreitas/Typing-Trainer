@@ -11,7 +11,7 @@ body {
     display: flex;
     align-items: center;
     font-family: 'Poppins', sans-serif;
-    background-color: #9e9e9e;
+    background-color: #ffffff;
     overflow-x: hidden;
 }
 
@@ -28,8 +28,14 @@ body {
     z-index: 2;
 }
 
-.header:hover {
-    animation: slide 1s linear;
+@keyframes slideOut {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(85%);
+    }
 }
 
 @keyframes slide {
@@ -79,4 +85,25 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
+    background-color: #adadadab;
+}
+
+.texto-inicial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 2px solid #000000;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #00000057;
+}
+
+.texto-inicial h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    background-image: linear-gradient(45deg, blue, purple);
+    color: transparent;
+    background-clip: text;
 }
