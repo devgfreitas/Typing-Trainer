@@ -11,7 +11,7 @@ body {
     display: flex;
     align-items: center;
     font-family: 'Poppins', sans-serif;
-    background-color: #ffffff;
+    background-color: #000000;
     overflow-x: hidden;
 }
 
@@ -26,26 +26,6 @@ body {
     right: 0;
     transform: translateX(85%);
     z-index: 2;
-}
-
-@keyframes slideOut {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(85%);
-    }
-}
-
-@keyframes slide {
-    0% {
-        transform: translateX(85%);
-    }
-
-    100% {
-        transform: translateX(0);
-    }
 }
 
 .logo-header img {
@@ -70,7 +50,7 @@ body {
     font-size: 2.5rem;
     line-height: 120px;
     font-weight: bold;
-    transition: all 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .lista-navbar li a:hover {
@@ -85,7 +65,18 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: #adadadab;
+    background-image: linear-gradient(90deg, #595959 0%, #3D3C3C 94%, #FFFFFF 100%);
+    opacity: 1;
+}
+
+.blur-background {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    height: 100%;
 }
 
 .texto-inicial {
@@ -94,10 +85,9 @@ body {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    border: 2px solid #000000;
     padding: 20px;
     border-radius: 20px;
-    background-color: #00000057;
+    background-color: #3d3c3c8a;
 }
 
 .texto-inicial h1 {
@@ -106,4 +96,64 @@ body {
     background-image: linear-gradient(45deg, blue, purple);
     color: transparent;
     background-clip: text;
+}
+
+.typing-area {
+    width: calc(100% - 80px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.column {
+    flex: 1;
+    height: 50%;
+    width: 100%;
+}
+
+.keyboard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.keyboard-body {
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    width: 100%;
+    max-width: 1300px;
+    background-color: #595959;
+    padding: 10px;
+    gap: 5px;
+}
+
+.keyboard-body button {
+    height: 60px;
+}
+
+.btn-caps {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.btn-enter {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.btn-shift {
+    grid-row: span 1;
+    grid-column: span 2;
+}
+
+.btn-ctrl {
+    grid-column: span 2;
+}
+
+.btn-space {
+    grid-column: span 5;
+    grid-row: span 1;
 }
