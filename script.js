@@ -1,6 +1,7 @@
 let header = document.getElementById('header');
 let main = document.getElementById('main');
 
+
 header.addEventListener('mouseenter', () => {
     header.style.transform = 'translateX(0)';
     header.style.transition = 'transform 1s ease';
@@ -13,3 +14,14 @@ header.addEventListener('mouseleave', () => {
     main.style.backgroundImage = 'linear-gradient(90deg, #595959 0%, #3D3C3C 94%, #FFFFFF 100%)';
 });
 
+document.addEventListener('keydown', function(event) {
+    let tecla = event.key;
+    let botao = document.querySelector('[data-key="${tecla}"]');
+    if(botao) {
+        botao.classList.add('active');
+
+        setTimeout( () => {
+            botao.classList.remove('active');
+        },100)
+    }
+})

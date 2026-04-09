@@ -24,7 +24,16 @@
     <main class="main" id="main">
         <section class="typing-area">
             <section class="texts column">
-                <h2>HELLO, WORLD!</h2>
+                <div class="info-text">
+                    <h1>Escreva o texto abaixo:</h1>
+                    <p>TEXTO ESTARÁ AQUI</p>
+                    <input type="text" disabled value="" id="input-text">
+                </div>
+                <div class="progresso">
+                    <p>tempo: <span id="timer">00:00</span></p>
+                    <progress id="progress" value="50" max="100"></progress>
+                </div>
+
             </section>
             <section class="keyboard column">
                 <div class="keyboard-body">
@@ -43,17 +52,17 @@
                     <button>+<br>= §</button>
                     <button>backspace</button>
 
-                    <button>tab</button>
-                    <button>Q</button>
-                    <button>W</button>
-                    <button>E</button>
-                    <button>R</button>
-                    <button>T</button>
-                    <button>Y</button>
-                    <button>U</button>
-                    <button>I</button>
-                    <button>O</button>
-                    <button>P</button>
+                    <button data-key="Tab">tab</button>
+                    <button data-key="q">Q</button>
+                    <button data-key="w">W</button>
+                    <button data-key="e">E</button>
+                    <button data-key="r">R</button>
+                    <button data-key="t">T</button>
+                    <button data-key="y">Y</button>
+                    <button data-key="u">U</button>
+                    <button data-key="i">I</button>
+                    <button data-key="o">O</button>
+                    <button data-key="p">P</button>
                     <button>`<br>´</button>
                     <button>&lbrace;<br>[ ª</button>
                     <button class="btn-enter">enter</button>
@@ -88,7 +97,6 @@
 
                     <button class="btn-ctrl">Ctrl</button>
                     <button>Fn</button>
-                    <button>Win</button>
                     <button>Alt</button>
                     <button class="btn-space">Space</button>
                     <button>alt gr</button>
