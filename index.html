@@ -27,7 +27,7 @@
                 <div class="info-text">
                     <h1>Escreva o texto abaixo:</h1>
                     <p>TEXTO ESTARÁ AQUI</p>
-                    <input type="text" disabled value="" id="input-text">
+                    <input id="input-texto" type="text" disabled value="">
                 </div>
                 <div class="progresso">
                     <p>tempo: <span id="timer">00:00</span></p>
@@ -38,33 +38,33 @@
             <section class="keyboard column">
                 <div class="keyboard-body">
                     <button>esc<br>" '</button>
-                    <button>!<br>1 ¹</button>
-                    <button>@<br>2 ²</button>
-                    <button>#<br>3 ³</button>
-                    <button>$<br>4 £</button>
-                    <button>%<br>5 ¢</button>
-                    <button>¨<br>6</button>
-                    <button>&<br>7</button>
-                    <button>*<br>8</button>
-                    <button>(<br>9</button>
-                    <button>)<br>0</button>
-                    <button>_<br>-</button>
-                    <button>+<br>= §</button>
-                    <button>backspace</button>
+                    <button onclick="digitar('1')">!<br>1 ¹</button>
+                    <button onclick="digitar('2')">@<br>2 ²</button>
+                    <button onclick="digitar('3')">#<br>3 ³</button>
+                    <button onclick="digitar('4')">$<br>4 £</button>
+                    <button onclick="digitar('5')">%<br>5 ¢</button>
+                    <button onclick="digitar('6')">¨<br>6</button>
+                    <button onclick="digitar('7')">&<br>7</button>
+                    <button onclick="digitar('8')">*<br>8</button>
+                    <button onclick="digitar('9')">(<br>9</button>
+                    <button onclick="digitar('0')">)<br>0</button>
+                    <button onclick="digitar('-')">_<br>-</button>
+                    <button onclick="digitar('=')">+<br>= §</button>
+                    <button onclick="apagar()">backspace</button>
 
-                    <button data-key="Tab">tab</button>
-                    <button data-key="q">Q</button>
-                    <button data-key="w">W</button>
-                    <button data-key="e">E</button>
-                    <button data-key="r">R</button>
-                    <button data-key="t">T</button>
-                    <button data-key="y">Y</button>
-                    <button data-key="u">U</button>
-                    <button data-key="i">I</button>
-                    <button data-key="o">O</button>
-                    <button data-key="p">P</button>
-                    <button>`<br>´</button>
-                    <button>&lbrace;<br>[ ª</button>
+                    <button>tab</button>
+                    <button data-key="q" onclick="digitar('q')">Q</button>
+                    <button data-key="w" onclick="digitar('w')">W</button>
+                    <button data-key="e" onclick="digitar('e')">E</button>
+                    <button data-key="r" onclick="digitar('r')">R</button>
+                    <button data-key="t" onclick="digitar('t')">T</button>
+                    <button data-key="y" onclick="digitar('y')">Y</button>
+                    <button data-key="u" onclick="digitar('u')">U</button>
+                    <button data-key="i" onclick="digitar('i')">I</button>
+                    <button data-key="o" onclick="digitar('o')">O</button>
+                    <button data-key="p" onclick="digitar('p')">P</button>
+                    <button onclick="digitar('´')">`<br>´</button>
+                    <button onclick="digitar('[')">&lbrace;<br>[ ª</button>
                     <button class="btn-enter">enter</button>
 
                     <button class="btn-caps">Caps Lock</button>

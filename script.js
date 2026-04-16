@@ -1,5 +1,6 @@
 let header = document.getElementById('header');
 let main = document.getElementById('main');
+let visor = document.getElementById('input-texto');
 
 
 header.addEventListener('mouseenter', () => {
@@ -13,6 +14,14 @@ header.addEventListener('mouseleave', () => {
     header.style.transition = 'transform 1s ease';
     main.style.backgroundImage = 'linear-gradient(90deg, #595959 0%, #3D3C3C 94%, #FFFFFF 100%)';
 });
+
+function digitar(letra) {
+    visor.value += letra;
+}
+
+function apagar() {
+    visor.value = visor.value.slice(0, -1)
+}
 
 document.addEventListener('keydown', function(event) {
     let tecla = event.key;
